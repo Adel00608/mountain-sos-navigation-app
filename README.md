@@ -21,5 +21,14 @@
 7. Құтқару операторы түскен SOS өтінімдерін картадан көріп, мәртебесін жаңартады.
 
 ## Құжаттама
-- [Activity: SOS көмек сигналын жіберу](docs/analysis/activity-send-sos.drawio)
-- [Sequence: SOS көмек сигналын жіберу](docs/analysis/sequence-send-sos.drawio)
+### Мінез-құлық диаграммалары (12-апта)
+- [Activity: SOS көмек сигналын жіберу](docs/analysis/activity-send-sos.png)
+- [Sequence: SOS көмек сигналын жіберу](docs/analysis/sequence-send-sos.png)
+
+### Деректер ағыны және деректер қоры (13-апта)
+- [DFD Context: Жүйенің контекстік диаграммасы](docs/analysis/dfd-context.png)
+- [DFD Level 0: Негізгі процестер мен деректер қоймалары](docs/analysis/dfd-level0.png)
+- [DFD Level 1: SOS көмек сигналын жіберу процесі](docs/analysis/dfd-level1.png)
+- [ERD: Деректер қорының логикалық моделі (3NF)](docs/database/erd.png)
+- [SQL Schema: PostgreSQL кестелері мен сұраныстары](docs/database/schema.sql)
+- [SQL Query Results: Сұраныстар нәтижесі](docs/database/query-results.png)
