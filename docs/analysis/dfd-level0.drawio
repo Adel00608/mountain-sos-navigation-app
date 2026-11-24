@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" modified="2026-11-24T15:00:00.000Z" agent="5.0" version="24.7.17" type="device">
+  <diagram id="dfd-level0" name="DFD Level 0">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e-tourist" value="Турист / Альпинист" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e-guide" value="Маршрут нұсқаушысы" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e-operator" value="Құтқару қызметінің операторы" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="160" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e-admin" value="Жүйе әкімшісі" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="640" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="1.0&#xa;Офлайн карта мен&#xa;маршруттарды басқару" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="540" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="2.0&#xa;SOS көмек сигналын&#xa;жіберу және өңдеу" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="3.0&#xa;Құтқару өтінімдерін&#xa;бақылау және растау" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="250" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="4.0&#xa;Пайдаланушылар мен&#xa;жүйені әкімшілендіру" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="560" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="D1 | users (Пайдаланушылар)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="420" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="D2 | routes (Маршруттар)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="340" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="D3 | sos_alerts (SOS сигналдары)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="300" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="SOS сигналы және GPS координаттары" style="endArrow=block;html=1;" edge="1" parent="1" source="e-tourist" target="p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="SOS растау мәртебесі" style="endArrow=block;html=1;" edge="1" parent="1" source="p2" target="e-tourist">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="Офлайн карта деректері" style="endArrow=block;html=1;" edge="1" parent="1" source="p1" target="e-tourist">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="Жаңа маршрут деректері" style="endArrow=block;html=1;" edge="1" parent="1" source="e-guide" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" value="Бекітілген маршруттар тізімі" style="endArrow=block;html=1;" edge="1" parent="1" source="p1" target="e-guide">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" value="Шұғыл SOS хабарламасы және координаттар" style="endArrow=block;html=1;" edge="1" parent="1" source="p3" target="e-operator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7" value="Құтқару өтінімінің мәртебесі" style="endArrow=block;html=1;" edge="1" parent="1" source="e-operator" target="p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l8" value="Пайдаланушылар мен карта пакеттерін баптау" style="endArrow=block;html=1;" edge="1" parent="1" source="e-admin" target="p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l9" value="Жүйелік есептер мен журналдар" style="endArrow=block;html=1;" edge="1" parent="1" source="p4" target="e-admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l10" value="Маршрут жазбасы" style="endArrow=block;html=1;" edge="1" parent="1" source="p1" target="d2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l11" value="Сақталған маршруттар" style="endArrow=block;html=1;" edge="1" parent="1" source="d2" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l12" value="Турист профилі" style="endArrow=block;html=1;" edge="1" parent="1" source="d1" target="p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l13" value="SOS жазбасын сақтау" style="endArrow=block;html=1;" edge="1" parent="1" source="p2" target="d3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l14" value="Белсенді SOS өтінімдері" style="endArrow=block;html=1;" edge="1" parent="1" source="d3" target="p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l15" value="Жаңартылған мәртебе" style="endArrow=block;html=1;" edge="1" parent="1" source="p3" target="d3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l16" value="Тіркелгі деректері" style="endArrow=block;html=1;" edge="1" parent="1" source="p4" target="d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l17" value="SOS статистикасы" style="endArrow=block;html=1;" edge="1" parent="1" source="d3" target="p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
