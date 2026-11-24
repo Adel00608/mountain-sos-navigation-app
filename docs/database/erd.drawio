@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2026-11-24T15:00:00.000Z" agent="5.0" version="24.7.17" type="device">
+  <diagram id="erd-mountain-sos" name="ERD - Mountain SOS">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t-users" value="users (D1)&#xa;-------------------------&#xa;PK user_id : INT&#xa;full_name : VARCHAR&#xa;phone : VARCHAR&#xa;role : VARCHAR&#xa;created_at : TIMESTAMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t-routes" value="routes (D2)&#xa;-------------------------&#xa;PK route_id : INT&#xa;FK guide_id : INT&#xa;route_name : VARCHAR&#xa;difficulty : VARCHAR&#xa;distance_km : DECIMAL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="t-waypoints" value="waypoints&#xa;-------------------------&#xa;PK waypoint_id : INT&#xa;FK route_id : INT&#xa;point_name : VARCHAR&#xa;latitude : DECIMAL&#xa;longitude : DECIMAL&#xa;elevation_m : INT" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="640" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t-user-routes" value="user_routes (M:N аралық)&#xa;-------------------------&#xa;PK, FK user_id : INT&#xa;PK, FK route_id : INT&#xa;downloaded_at : TIMESTAMP&#xa;is_completed : BOOLEAN" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="380" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="t-sos" value="sos_alerts (D3)&#xa;-------------------------&#xa;PK alert_id : INT&#xa;FK user_id : INT&#xa;latitude : DECIMAL&#xa;longitude : DECIMAL&#xa;battery_level : INT&#xa;channel : VARCHAR&#xa;status : VARCHAR&#xa;created_at : TIMESTAMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="230" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="t-responses" value="rescue_responses&#xa;-------------------------&#xa;PK response_id : INT&#xa;FK alert_id : INT&#xa;FK operator_id : INT&#xa;action_note : VARCHAR&#xa;responded_at : TIMESTAMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="100" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-users" target="t-routes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-routes" target="t-waypoints">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-users" target="t-user-routes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-routes" target="t-user-routes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-users" target="t-sos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" value="1 : N" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-sos" target="t-responses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" value="1 : N (operator)" style="endArrow=many;startArrow=one;html=1;" edge="1" parent="1" source="t-users" target="t-responses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
