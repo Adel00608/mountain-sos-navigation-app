@@ -21,5 +21,5 @@
 7. Құтқару операторы түскен SOS өтінімдерін картадан көріп, мәртебесін жаңартады.
 
 ## Құжаттама
-- [Activity: SOS көмек сигналын жіберу](docs/analysis/activity-send-sos.png)
-- [Sequence: SOS көмек сигналын жіберу](docs/analysis/sequence-send-sos.png)
+- [Activity: SOS көмек сигналын жіберу](docs/analysis/activity-send-sos.drawio)
+- [Sequence: SOS көмек сигналын жіберу](docs/analysis/sequence-send-sos.drawio)
